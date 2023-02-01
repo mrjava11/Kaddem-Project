@@ -1,0 +1,19 @@
+version :"3.9"
+label : imtinen
+services:
+  mysqldb:
+    container_name: mysqldb
+    image: mysql:8
+    restart: on-failure 
+    environment:
+       MYSQL_ROOT_PASSWORD: root
+    volumes : /home/mysql/data:/var/lib/mysqldb
+  spring_app:
+    image: "spring-imtinen"
+    container_name: devops
+    image: mysql:8
+    restart: on-failure 
+    ports:
+       - 9090:9090
+    depends_on : 
+       - mysqldb
