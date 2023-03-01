@@ -62,7 +62,7 @@
          
 <distributionManagement>
 ...
-<url>http://192.168.108.222:8081/repository/maven-releases/</url>
+<url>http://192.168.33.10:8081/repository/maven-releases/</url>
 ....
 </distributionManagement>
 
