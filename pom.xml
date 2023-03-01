@@ -56,7 +56,12 @@
             <version>1.6.11</version>
         </dependency>
     </dependencies>
-
+<distributionManagement>
+            <snapshotRepository>
+               <id>deploymentRepo</id>
+               <url>http://localhost:8081/repository/maven-releases</url>
+            </snapshotRepository>
+</distributionManagement>
     <build>
         <plugins>
             <plugin>
