@@ -4,7 +4,14 @@ pipeline {
     }
 
     stages {
-        
+        stage('SonarQube analysis') {
+            steps {
+                // Run SonarQube analysis ozdozjdozjdozjdo
+                withSonarQubeEnv('sonarqube') {
+                    sh 'mvn sonar:sonar -Dsonar.projectKey=tn.esprit:KaddemProject -Dsonar.host.url=http://localhost:9000 -Dsonar.login=50373cb03e7e7ad7fda38f55f5fa7fbe74a049a4'
+                }
+            }
+        }
        
         stage("Build") {
             steps {
